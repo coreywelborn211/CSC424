@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_off_white"
+    android:id="@+id/contain"
+    tools:context=".home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTotals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/totals_grad"
+        android:padding="25dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/totalsBackgroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/home_tile"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/homeHeaderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Statistics"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#202020"
+            android:paddingBottom="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/itemCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Count: 20"
+            android:layout_marginStart="25dp"
+            app:layout_constraintTop_toBottomOf="@id/homeHeaderText"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/totalAssetText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Assets: $4,086.46"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintTop_toBottomOf="@id/homeHeaderText"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/lastScanText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Scan: 2/5/2021"
+            android:layout_marginStart="25dp"
+            app:layout_constraintTop_toBottomOf="@id/itemCountText"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/employeeCountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Login: 2/20/2021"
+            android:layout_marginEnd="25dp"
+            app:layout_constraintTop_toBottomOf="@id/totalAssetText"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutTotals"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="54dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:id="@+id/layoutInventoryTile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/home_tile"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:elevation="2dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toStartOf="@id/layoutReportsTile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_baseline_home_24"
+                    app:tint="@color/teal_700" />
+
+                <TextView
+                    android:id="@+id/lightsaber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Home" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutReportsTile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/home_tile"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:elevation="2dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/layoutInventoryTile"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_inventory"
+                    app:tint="@color/teal_700" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Inventory" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAssetsTile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/home_tile"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:elevation="2dp"
+                android:clipToPadding="false"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toStartOf="@id/layoutCommitTile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutInventoryTile">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_account"
+                    app:tint="@color/teal_700" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Account" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutCommitTile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/home_tile"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:elevation="2dp"
+                android:clipToPadding="false"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/layoutAssetsTile"
+                app:layout_constraintTop_toBottomOf="@id/layoutReportsTile">
+
+                <ImageView
+                    android:id="@+id/inventoryImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_baseline_add_box_24"
+                    app:tint="@color/teal_700" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Add Item" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:layout_marginTop="50dp"
+                app:layout_constraintTop_toBottomOf="@id/layoutCommitTile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
