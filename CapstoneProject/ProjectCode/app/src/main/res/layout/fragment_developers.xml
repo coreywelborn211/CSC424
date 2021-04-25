@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".DevelopersFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/cody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cody Ezell"
+        android:fontFamily="@font/raleway"
+        android:textSize="30dp"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/corey"
+        />
+
+        <TextView
+            android:id="@+id/codyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Team Leader"
+            android:fontFamily="@font/raleway"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cody"
+            />
+    <TextView
+        android:id="@+id/corey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:textSize="30dp"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cody"
+        app:layout_constraintBottom_toTopOf="@+id/steven"
+        android:text="Corey Welborn" />
+
+        <TextView
+            android:id="@+id/coreyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lead Developer"
+            android:fontFamily="@font/raleway"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/corey"
+            />
+    <TextView
+        android:id="@+id/steven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:textSize="30dp"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/corey"
+        app:layout_constraintBottom_toTopOf="@+id/zachary"
+        android:text="Steven Davis" />
+
+        <TextView
+            android:id="@+id/stevenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Graphic Designer"
+            android:fontFamily="@font/raleway"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/steven"
+            />
+    <TextView
+        android:id="@+id/zachary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:textSize="30dp"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/steven"
+        app:layout_constraintBottom_toTopOf="@+id/matthew"
+        android:text="Zachary Light" />
+
+        <TextView
+            android:id="@+id/zacharyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Database"
+            android:fontFamily="@font/raleway"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/zachary"
+            />
+
+
+    <TextView
+        android:id="@+id/matthew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:textSize="30dp"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/zachary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Matthew Crocker" />
+
+        <TextView
+            android:id="@+id/matthewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Software Engineer"
+            android:fontFamily="@font/raleway"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/matthew"
+            />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
